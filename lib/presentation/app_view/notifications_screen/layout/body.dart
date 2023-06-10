@@ -13,12 +13,12 @@ class NotificationsScreenBody extends StatelessWidget {
         Header(),
         Expanded(
             child: Container(
-          color: Colors.red,
+          color: Colors.white,
           child: Padding(
             padding: EdgeInsets.all(20),
             child: Column(
               children: [
-                Align(child: Text('Notifications',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30) ,),alignment: Alignment.topLeft,),
+                Align(child: Text('Notifications',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30, color: Colors.red) ,),alignment: Alignment.topLeft,),
                 SizedBox(height: 20,),
                 ListView.builder(
                     shrinkWrap: true,

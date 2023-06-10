@@ -8,20 +8,24 @@ class SingleChat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ListTile(
-          leading: CircleAvatar(
-            backgroundColor: Colors.green,
-            radius: 30,
+    return GestureDetector(
+      onTap: (){print('chat clicked');},
+      child: Column(
+        children: [
+          ListTile(
+            leading: CircleAvatar(
+              backgroundColor: Colors.green,
+              radius: 30,
+            ),
+            title: Text('Muhammad Arsalan',style: TextStyle(color: Colors.red),),
+            subtitle: Text('Good Morning',style: TextStyle(color: Colors.green),),
           ),
-          title: Text('Muhammad Arsalan'),
-          subtitle: Text('Good Morning'),
-        ),
-        Divider(
-          thickness: 3,
-        )
-      ],
+          Divider(
+            thickness: 3,
+            color: Colors.black.withOpacity(0.3),
+          )
+        ],
+      ),
     );
   }
 }

@@ -12,7 +12,7 @@ class ChatListBody extends StatelessWidget {
         Header(),
         Expanded(
           child: Container(
-            color: Colors.red,
+            color: Colors.white,
             child: Padding(
               padding: EdgeInsets.all(20),
               child: ListView.builder(

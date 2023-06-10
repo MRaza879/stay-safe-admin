@@ -16,20 +16,20 @@ class ReportsScreenBody extends StatelessWidget {
         //Divider(thickness: 3,color: Colors.black,),
         Expanded(
           child: Container(
-            color: Colors.red,
+            color: Colors.white,
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  Align(child: Text('Reports',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30) ,),alignment: Alignment.topLeft,),
+                  Align(child: Text('Reports',style: TextStyle(color:Colors.red,fontWeight: FontWeight.bold,fontSize: 30) ,),alignment: Alignment.topLeft,),
                   SizedBox(height: 20,),
                   Row(
                     children: [
-                      SizedBox(child: Center(child: Text('#'),),width: 70,),
-                      SizedBox(child: Center(child: Text('Name'),),width: 180),
-                      SizedBox(child: Center(child: Text('Location'),),width: 180),
-                      SizedBox(child: Center(child: Text('Date'),),width: 180),
-                      SizedBox(child: Center(child: Text('contact'),),width: 180),
+                      SizedBox(child: Center(child: Text('#',style: TextStyle(color: Colors.red),),),width: 70,),
+                      SizedBox(child: Center(child: Text('Name',style: TextStyle(color: Colors.red)),),width: 180),
+                      SizedBox(child: Center(child: Text('Location',style: TextStyle(color: Colors.red)),),width: 180),
+                      SizedBox(child: Center(child: Text('Date',style: TextStyle(color: Colors.red)),),width: 180),
+                      SizedBox(child: Center(child: Text('contact',style: TextStyle(color: Colors.red)),),width: 180),
 
                     ],
 
