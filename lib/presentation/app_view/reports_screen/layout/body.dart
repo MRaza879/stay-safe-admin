@@ -4,6 +4,7 @@ import 'package:saty_safe_admin/elements/header.dart';
 import '../../../../elements/app_logo.dart';
 import 'widgets/report.dart';
 class ReportsScreenBody extends StatelessWidget {
+
   const ReportsScreenBody({
     super.key,
   });
@@ -38,7 +39,7 @@ class ReportsScreenBody extends StatelessWidget {
                       shrinkWrap: true,
                       itemCount: 06,
                       itemBuilder: (context,index){
-                        return Report();
+                        return Report(serialNumber: index+1,name: 'Muhammad Raza',location: 'Karachi',contact: '03234567859',date: '01-01-2023',);
                       }
                   ),
                 ],

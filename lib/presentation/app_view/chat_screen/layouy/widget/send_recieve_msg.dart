@@ -28,7 +28,7 @@ class SenderRecieverMessage extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   decoration: BoxDecoration(
-                      color: ColorConstants.kPrimaryColor.withOpacity(1),
+                      color: Colors.red,
                       borderRadius: BorderRadius.circular(10)),
                   child: CustomText(
                     text: msg,
@@ -62,7 +62,7 @@ class SenderRecieverMessage extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   decoration: BoxDecoration(
-                      color: ColorConstants.kBackgroundColor,
+                      color: Theme.of(context).splashColor.withOpacity(1),
                       borderRadius: BorderRadius.circular(10)),
                   child: Text(
                     msg,

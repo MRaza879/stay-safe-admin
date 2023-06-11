@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saty_safe_admin/elements/small_button.dart';
 
 class Notifications extends StatelessWidget {
   const Notifications({
@@ -16,28 +17,12 @@ class Notifications extends StatelessWidget {
           ),
           title: Text('Muhammad Arsalan shared his his location with you. Track him immediately and help him out. Muhammad Arsalan shared his his location with you.',
           style: TextStyle(
-            color: Colors.red
+            color: Colors.black87
           ),),
           subtitle: Text('1 min ago',style: TextStyle(
-            color: Colors.green
+            color: Colors.grey.withOpacity(0.5)
           ),),
-          trailing: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: InkWell(
-              onTap: (){},
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Center(
-                  child: Text('Track'),
-                ),
-                height: 40,
-                width: 50,
-              ),
-            ),
-          ),
+          trailing: SmallButton(text: 'Track',height: 40,width: 70,)
 
         ),
         Divider(thickness: 3,color: Colors.black.withOpacity(0.3),)

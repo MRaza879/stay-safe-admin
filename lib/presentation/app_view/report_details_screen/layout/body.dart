@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:saty_safe_admin/presentation/app_view/report_details_screen/layout/widgets/report_text.dart';
 
 import '../../../../elements/app_logo.dart';
 import '../../../../elements/header.dart';
@@ -28,15 +29,7 @@ class ReportDetailsScreenBody extends StatelessWidget {
                       children: [
                         Text('Name',style: TextStyle(color: Colors.red),),
                         SizedBox(height: 10,),
-                        Container(
-                          color: Colors.green.withOpacity(0.3),
-                          height: 40,
-                          width: 500,
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Text('Name',style: TextStyle(color: Colors.black87.withOpacity(0.3))),
-                          ),
-                        )
+                        ReportText(height: 40,width: 500,text: "John Smith",)
                       ],
                     ),
                     SizedBox(width: 50,),
@@ -45,15 +38,7 @@ class ReportDetailsScreenBody extends StatelessWidget {
                       children: [
                         Text('Contact Number',style: TextStyle(color: Colors.red)),
                         SizedBox(height: 10,),
-                        Container(
-                          color: Colors.green.withOpacity(0.3),
-                          height: 40,
-                          width: 500,
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Text('Contact Number',style: TextStyle(color: Colors.black87.withOpacity(0.3))),
-                          ),
-                        )
+                        ReportText(height: 40,width: 500,text: "03356576894",)
                       ],
                     )
                   ],
@@ -66,15 +51,7 @@ class ReportDetailsScreenBody extends StatelessWidget {
                       children: [
                         Text('Date',style: TextStyle(color: Colors.red)),
                         SizedBox(height: 10,),
-                        Container(
-                          color: Colors.green.withOpacity(0.3),
-                          height: 40,
-                          width: 200,
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Text('Date',style: TextStyle(color: Colors.black87.withOpacity(0.3))),
-                          ),
-                        )
+                        ReportText(height: 40,width: 200,text: '11-06-2023',)
                       ],
                     ),
                     SizedBox(width: 40,),
@@ -83,15 +60,7 @@ class ReportDetailsScreenBody extends StatelessWidget {
                       children: [
                         Text('Time',style: TextStyle(color: Colors.red)),
                         SizedBox(height: 10,),
-                        Container(
-                          color: Colors.green.withOpacity(0.3),
-                          height: 40,
-                          width: 200,
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Text('Time',style: TextStyle(color: Colors.black87.withOpacity(0.3))),
-                          ),
-                        )
+                        ReportText(height: 40,width: 200,text: '04:56 pm',)
                       ],
                     ),
                     Spacer(),
@@ -100,21 +69,7 @@ class ReportDetailsScreenBody extends StatelessWidget {
                       children: [
                         Text('Incident Location',style: TextStyle(color: Colors.red)),
                         SizedBox(height: 10,),
-                        Container(
-                          color: Colors.green.withOpacity(0.3),
-                          height: 40,
-                          width: 500,
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Row(
-                              children: [
-                                Text('Location',style: TextStyle(color: Colors.black87.withOpacity(0.3))),
-                                Spacer(),
-                                Icon(Icons.location_on,color: Colors.black,)
-                              ],
-                            ),
-                          ),
-                        )
+                        ReportText(height: 40,width: 500,text: 'Kohat',)
                       ],
                     )
                   ],
@@ -122,12 +77,7 @@ class ReportDetailsScreenBody extends StatelessWidget {
                 SizedBox(height: 30,),
                 Align(child: Text('Incident Details',style: TextStyle(color: Colors.red)),alignment: Alignment.topLeft,),
                 SizedBox(height:10),
-                Container(
-                  color: Colors.green.withOpacity(0.3),
-                  width: 1200,
-                  height: 220,
-                  child: Text('Here are the details of the incident',style: TextStyle(color: Colors.black.withOpacity(0.3)),)
-                )
+                ReportText(height: 220,width: 1200,text: 'Here are the details of the incident',)
               ],
             ),
           ),

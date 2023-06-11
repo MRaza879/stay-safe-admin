@@ -30,46 +30,50 @@ class DashBoardBody extends StatelessWidget {
                     ]),
                     SizedBox(height: 20,),
                     Expanded(child: TabBarView(children: [
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              SizedBox(child: Center(child: Text('#',style: TextStyle(color: Colors.red),),),width: 70,),
-                              SizedBox(child: Center(child: Text('Name',style: TextStyle(color: Colors.red),),),width: 180),
-                              SizedBox(child: Center(child: Text('Email Address',style: TextStyle(color: Colors.red),),),width: 180),
-                              SizedBox(child: Center(child: Text('Contact',style: TextStyle(color: Colors.red),),),width: 180),
+                      SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(child: Center(child: Text('#',style: TextStyle(color: Colors.red),),),width: 70,),
+                                SizedBox(child: Center(child: Text('Name',style: TextStyle(color: Colors.red),),),width: 180),
+                                SizedBox(child: Center(child: Text('Email Address',style: TextStyle(color: Colors.red),),),width: 180),
+                                SizedBox(child: Center(child: Text('Contact',style: TextStyle(color: Colors.red),),),width: 180),
 
-                            ],
+                              ],
 
-                          ),
-                          ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: 06,
-                              itemBuilder: (context,index){
-                                return User(name: 'Muhammad Arsalan',contact: '03234534555',email: 'abc@gmail.com',serial:index+1);
-                              }
-                          )
-                        ],
+                            ),
+                            ListView.builder(
+                                shrinkWrap: true,
+                                itemCount: 06,
+                                itemBuilder: (context,index){
+                                  return User(name: 'Muhammad Arsalan',contact: '03234534555',email: 'abc@gmail.com',serial:index+1);
+                                }
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              SizedBox(child: Center(child: Text('#',style: TextStyle(color: Colors.red)),),width: 70,),
-                              SizedBox(child: Center(child: Text('User Name',style: TextStyle(color: Colors.red)),),width: 180),
-                              SizedBox(child: Center(child: Text('Email Address',style: TextStyle(color: Colors.red)),),width: 180),
+                      SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(child: Center(child: Text('#',style: TextStyle(color: Colors.red)),),width: 70,),
+                                SizedBox(child: Center(child: Text('User Name',style: TextStyle(color: Colors.red)),),width: 180),
+                                SizedBox(child: Center(child: Text('Email Address',style: TextStyle(color: Colors.red)),),width: 180),
 
-                            ],
+                              ],
 
-                          ),
-                          ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: 06,
-                              itemBuilder: (context,index){
-                                return SubAdmin(username: 'Muhammad Arsalan',email: 'abc@gmail.com',serial:index+1);
-                              }
-                          )
-                        ],
+                            ),
+                            ListView.builder(
+                                shrinkWrap: true,
+                                itemCount: 06,
+                                itemBuilder: (context,index){
+                                  return SubAdmin(username: 'Muhammad Arsalan',email: 'abc@gmail.com',serial:index+1);
+                                }
+                            )
+                          ],
+                        ),
                       )
                     ]))
                   ],

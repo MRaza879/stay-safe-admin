@@ -17,8 +17,9 @@ class SingleChat extends StatelessWidget {
               backgroundColor: Colors.green,
               radius: 30,
             ),
-            title: Text('Muhammad Arsalan',style: TextStyle(color: Colors.red),),
-            subtitle: Text('Good Morning',style: TextStyle(color: Colors.green),),
+            title: Text('Muhammad Arsalan',style: TextStyle(color: Colors.black87,fontWeight: FontWeight.bold),),
+            subtitle: Text('Good Morning',style: TextStyle(color: Colors.grey.withOpacity(0.5)),),
+            trailing: Text('12:00 Am',style: TextStyle(color: Colors.grey.withOpacity(0.5)),),
           ),
           Divider(
             thickness: 3,

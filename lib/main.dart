@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: ColorConstants.kBackgroundColor
+        scaffoldBackgroundColor: Colors.red
       ),
       routes: {
         LoginScreenView.routeName: (context) => const LoginScreenView() ,

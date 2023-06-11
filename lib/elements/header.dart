@@ -14,7 +14,7 @@ class Header extends StatelessWidget {
     return Container(
       height: 100,
       decoration: BoxDecoration(
-          color: Colors.white70
+          color: Theme.of(context).splashColor.withOpacity(1)
       ),
       child: Padding(
         padding: EdgeInsets.all(10),
