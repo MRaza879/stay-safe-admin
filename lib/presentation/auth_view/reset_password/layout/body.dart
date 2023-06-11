@@ -79,6 +79,8 @@ class ResetPasswordBody extends StatelessWidget {
                     ),
                     k10,
                     CustomTextField(
+                      cursorColor: ColorConstants.kPrimaryColor,
+                      inputTextColor: Colors.black87.withOpacity(0.5),
                       controller: _emailController,
                       hintText: 'Enter Your Email',
                       prefixIcon: Icons.email_outlined,

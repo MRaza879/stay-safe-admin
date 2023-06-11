@@ -22,20 +22,19 @@ class Report extends StatelessWidget {
           SizedBox(child: Center(child: Text('03159605879',style: TextStyle(color: Colors.red)),),width: 180),
           Spacer(flex: 1),
 
-          InkWell(
-            onTap: (){
-            },
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: InkWell(
+              onTap: (){},
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(15)
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 child: Center(
-                  child: Text('View',style: TextStyle(color: Colors.black87)),
+                  child: Text('View'),
                 ),
-                height: 30,
+                height: 40,
                 width: 50,
               ),
             ),

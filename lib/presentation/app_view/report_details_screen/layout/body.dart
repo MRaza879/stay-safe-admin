@@ -14,26 +14,27 @@ class ReportDetailsScreenBody extends StatelessWidget {
       children: [
         Header(),
         Expanded(child: Container(
+          color: Colors.white,
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: Column(
               children: [
-                Text('Incident Report',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                Text('Incident Report',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.red),),
                 SizedBox(height: 20,),
                 Row(
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Name'),
+                        Text('Name',style: TextStyle(color: Colors.red),),
                         SizedBox(height: 10,),
                         Container(
-                          color: Colors.green,
+                          color: Colors.green.withOpacity(0.3),
                           height: 40,
                           width: 500,
                           child: Padding(
                             padding: const EdgeInsets.all(10),
-                            child: Text('Name'),
+                            child: Text('Name',style: TextStyle(color: Colors.black87.withOpacity(0.3))),
                           ),
                         )
                       ],
@@ -42,15 +43,15 @@ class ReportDetailsScreenBody extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Contact Number'),
+                        Text('Contact Number',style: TextStyle(color: Colors.red)),
                         SizedBox(height: 10,),
                         Container(
-                          color: Colors.green,
+                          color: Colors.green.withOpacity(0.3),
                           height: 40,
                           width: 500,
                           child: Padding(
                             padding: const EdgeInsets.all(10),
-                            child: Text('Contact Number'),
+                            child: Text('Contact Number',style: TextStyle(color: Colors.black87.withOpacity(0.3))),
                           ),
                         )
                       ],
@@ -63,15 +64,15 @@ class ReportDetailsScreenBody extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Date'),
+                        Text('Date',style: TextStyle(color: Colors.red)),
                         SizedBox(height: 10,),
                         Container(
-                          color: Colors.green,
+                          color: Colors.green.withOpacity(0.3),
                           height: 40,
                           width: 200,
                           child: Padding(
                             padding: const EdgeInsets.all(10),
-                            child: Text('Date'),
+                            child: Text('Date',style: TextStyle(color: Colors.black87.withOpacity(0.3))),
                           ),
                         )
                       ],
@@ -80,15 +81,15 @@ class ReportDetailsScreenBody extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Time'),
+                        Text('Time',style: TextStyle(color: Colors.red)),
                         SizedBox(height: 10,),
                         Container(
-                          color: Colors.green,
+                          color: Colors.green.withOpacity(0.3),
                           height: 40,
                           width: 200,
                           child: Padding(
                             padding: const EdgeInsets.all(10),
-                            child: Text('Time'),
+                            child: Text('Time',style: TextStyle(color: Colors.black87.withOpacity(0.3))),
                           ),
                         )
                       ],
@@ -97,19 +98,19 @@ class ReportDetailsScreenBody extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Incident Location'),
+                        Text('Incident Location',style: TextStyle(color: Colors.red)),
                         SizedBox(height: 10,),
                         Container(
-                          color: Colors.green,
+                          color: Colors.green.withOpacity(0.3),
                           height: 40,
                           width: 500,
                           child: Padding(
                             padding: const EdgeInsets.all(10),
                             child: Row(
                               children: [
-                                Text('Location'),
+                                Text('Location',style: TextStyle(color: Colors.black87.withOpacity(0.3))),
                                 Spacer(),
-                                Icon(Icons.location_on)
+                                Icon(Icons.location_on,color: Colors.black,)
                               ],
                             ),
                           ),
@@ -119,11 +120,14 @@ class ReportDetailsScreenBody extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 30,),
-                Align(child: Text('Incident Details'),alignment: Alignment.topLeft,),
+                Align(child: Text('Incident Details',style: TextStyle(color: Colors.red)),alignment: Alignment.topLeft,),
                 SizedBox(height:10),
-                Expanded(child: Container(
-                  color: Colors.green,
-                ))
+                Container(
+                  color: Colors.green.withOpacity(0.3),
+                  width: 1200,
+                  height: 220,
+                  child: Text('Here are the details of the incident',style: TextStyle(color: Colors.black.withOpacity(0.3)),)
+                )
               ],
             ),
           ),

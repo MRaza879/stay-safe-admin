@@ -14,7 +14,7 @@ class CustomButton extends StatelessWidget {
       this.width = double.infinity,
       this.height,
       required this.buttonText,
-      this.bgColor = ColorConstants.kPrimaryColor,
+      this.bgColor,
       this.onTapped,
       required this.radius});
 
@@ -25,7 +25,7 @@ class CustomButton extends StatelessWidget {
         width: width,
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: bgColor,
+                backgroundColor: this.bgColor??ColorConstants.kPrimaryColor,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(radius))),
             onPressed: onTapped,

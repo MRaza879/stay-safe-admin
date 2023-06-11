@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:saty_safe_admin/elements/header.dart';
 import 'package:saty_safe_admin/elements/sizes.dart';
 
+import '../../../../configurations/color_constants.dart';
 import '../../../../elements/app_logo.dart';
 import '../../../../elements/custom_button.dart';
 import '../../../../elements/custom_text.dart';
@@ -22,7 +23,7 @@ class AddSubAdminBody extends StatelessWidget {
             child: Column(
               children: [
                 Align(alignment: Alignment.topLeft,
-                  child: Text('Add Sub Admin',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 28,color: Colors.red),),
+                  child: Text('Add Sub Admin',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 28,color: ColorConstants.kBackgroundColor),),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(25),
@@ -57,6 +58,8 @@ class AddSubAdminBody extends StatelessWidget {
                               child: CustomText(text: 'User Name',color: Colors.red,),
                             ),
                             CustomTextField(
+                              borderColor: Colors.red,
+                              cursorColor: Colors.red,
                               inputTextColor: Colors.black87.withOpacity(0.5),
                               //controller: _emailController,
                               hintText: 'Enter Your User Name',
@@ -70,6 +73,8 @@ class AddSubAdminBody extends StatelessWidget {
                               child: CustomText(text: 'Email',color: Colors.red,),
                             ),
                             CustomTextField(
+                              borderColor: Colors.red,
+                              cursorColor: Colors.red,
                               inputTextColor: Colors.black87.withOpacity(0.5),
                               //controller: _emailController,
                               hintText: 'Enter Your Email',
@@ -85,7 +90,9 @@ class AddSubAdminBody extends StatelessWidget {
                               ),
                             ),
                             CustomTextField(
+                              borderColor: Colors.red,
                               inputTextColor: Colors.black87.withOpacity(0.5),
+                              cursorColor: Colors.red,
                               //controller: _passwordController,
                               hintText: 'Password',
                               isObsecure: true,
@@ -94,6 +101,7 @@ class AddSubAdminBody extends StatelessWidget {
                             ),
                             k20,
                             CustomButton(
+                              bgColor: Colors.red,
                               buttonText: 'Create',
                               radius: 12,
                               onTapped: () {

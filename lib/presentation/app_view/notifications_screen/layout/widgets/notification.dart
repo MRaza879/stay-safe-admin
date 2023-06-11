@@ -21,22 +21,19 @@ class Notifications extends StatelessWidget {
           subtitle: Text('1 min ago',style: TextStyle(
             color: Colors.green
           ),),
-          trailing: InkWell(
-            onTap: (){},
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+          trailing: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: InkWell(
+              onTap: (){},
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(15)
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 child: Center(
-                  child: Text('Track',
-                  style: TextStyle(
-                    color: Colors.black87
-                  ),),
+                  child: Text('Track'),
                 ),
-                height: 30,
+                height: 40,
                 width: 50,
               ),
             ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:saty_safe_admin/dashboard/dashboard_view.dart';
 import 'package:saty_safe_admin/presentation/app_view/add_subadmin/add_subadmin_view.dart';
 import 'package:saty_safe_admin/presentation/app_view/chat_list/chat_list_view.dart';
+import 'package:saty_safe_admin/presentation/app_view/chat_screen/chat_screen_view.dart';
+import 'package:saty_safe_admin/presentation/app_view/heat_map/heat_map_view.dart';
 import 'package:saty_safe_admin/presentation/app_view/home_screen/layout/widget/side_bar.dart';
 import 'package:saty_safe_admin/presentation/app_view/report_details_screen/report_details_Screen_view.dart';
 import '../../../../configurations/color_constants.dart';
@@ -27,6 +29,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
     ReportDetailsScreenView(),
     ChatListView(),
     AddSubAdminView(),
+    ChatScreenView(),
+    HeatMapView()
   ];
   @override
   Widget build(BuildContext context) {
@@ -163,6 +167,38 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                         ),
                       ),
                     ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          index = 6;
+                        });
+                      },
+                      child: Container(
+                        child: ListTile(
+                          leading: Icon(
+                            Icons.messenger,
+                            size: 30,
+                          ),
+                          title: CustomText(text: 'Chat Screen View'),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          index = 7;
+                        });
+                      },
+                      child: Container(
+                        child: ListTile(
+                          leading: Icon(
+                            Icons.fmd_good,
+                            size: 30,
+                          ),
+                          title: CustomText(text: 'Heat Map'),
+                        ),
+                      ),
+                    )
                   ],
                 ))
               ],

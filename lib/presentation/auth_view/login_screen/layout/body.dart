@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saty_safe_admin/configurations/color_constants.dart';
 import 'package:saty_safe_admin/helper/navigation_helper.dart';
 import 'package:saty_safe_admin/configurations/color_constants.dart';
 import 'package:saty_safe_admin/elements/app_logo.dart';
@@ -67,6 +68,8 @@ class LoginScreenViewBody extends StatelessWidget {
                         child: CustomText(text: 'Email'),
                       ),
                       CustomTextField(
+                        inputTextColor: Colors.black87.withOpacity(0.5),
+                        cursorColor: ColorConstants.kPrimaryColor,
                         controller: _emailController,
                         hintText: 'Enter Your Email',
                         prefixIcon: Icons.email_outlined,
@@ -80,6 +83,8 @@ class LoginScreenViewBody extends StatelessWidget {
                         ),
                       ),
                       CustomTextField(
+                        cursorColor: ColorConstants.kPrimaryColor,
+                        inputTextColor: Colors.black87.withOpacity(0.5),
                         controller: _passwordController,
                         hintText: 'Password',
                         isObsecure: true,

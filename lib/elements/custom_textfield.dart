@@ -11,9 +11,12 @@ class CustomTextField extends StatefulWidget {
   IconData? prefixIcon;
   bool? isSuffix;
   Color? inputTextColor;
-  
+  Color? cursorColor;
+  Color? borderColor;
+
 
   CustomTextField({
+    this.cursorColor,
     this.inputTextColor,
     this.controller,
     this.isObsecure = false,
@@ -23,6 +26,7 @@ class CustomTextField extends StatefulWidget {
     this.radius,
     this.prefixIcon,
     this.isSuffix = false,
+    this.borderColor
   });
 
   @override
@@ -41,7 +45,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       controller: widget.controller,
       obscureText: widget.isObsecure,
       keyboardType: widget.textInputType,
-      cursorColor: ColorConstants.kPrimaryColor,
+      cursorColor: widget.cursorColor??ColorConstants.kPrimaryColor,
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderSide:
@@ -50,17 +54,17 @@ class _CustomTextFieldState extends State<CustomTextField> {
         ),
         enabledBorder: OutlineInputBorder(
           borderSide:
-              const BorderSide(width: 1.2, color: ColorConstants.kPrimaryColor),
+               BorderSide(width: 1.2, color: widget.borderColor??ColorConstants.kPrimaryColor),
           borderRadius: BorderRadius.circular(widget.radius ?? 12),
         ),
         disabledBorder: OutlineInputBorder(
           borderSide:
-              const BorderSide(width: 1.2, color: ColorConstants.kPrimaryColor),
+               BorderSide(width: 1.2, color: widget.borderColor??ColorConstants.kPrimaryColor),
           borderRadius: BorderRadius.circular(widget.radius ?? 12),
         ),
         focusedBorder: OutlineInputBorder(
           borderSide:
-              const BorderSide(width: 1.2, color: ColorConstants.kPrimaryColor),
+               BorderSide(width: 1.2, color: widget.borderColor??ColorConstants.kPrimaryColor),
           borderRadius: BorderRadius.circular(widget.radius ?? 12),
         ),
         hintText: widget.hintText,
