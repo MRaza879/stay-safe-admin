@@ -13,7 +13,8 @@ import '../../notifications_screen/notifications_screen_view.dart';
 import '../../reports_screen/reports_screen_view.dart';
 
 class HomeScreenBody extends StatefulWidget {
-  const HomeScreenBody({Key? key}) : super(key: key);
+  int? newIndex;
+  HomeScreenBody({Key? key,this.newIndex}) : super(key: key);
 
   @override
   State<HomeScreenBody> createState() => _HomeScreenBodyState();
@@ -21,7 +22,6 @@ class HomeScreenBody extends StatefulWidget {
 
 class _HomeScreenBodyState extends State<HomeScreenBody> {
   int index = 0;
-  int selectedIndex = 0;
   List widgets = const [
     DashBoardView(),
     ReportsScreenView(),
@@ -34,6 +34,9 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
   ];
   @override
   Widget build(BuildContext context) {
+    if(widget.newIndex!=null){ index=widget.newIndex!;}
+
+    print(index);
     return Scaffold(
       body: SafeArea(
         child: Row(
@@ -103,7 +106,6 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                         });
                       },
                       child: Container(
-                        color: ColorConstants.kgreyColor,
                         child: ListTile(
                             leading: Icon(
                               Icons.access_time_filled,
@@ -206,16 +208,10 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             Expanded(
               flex: 4,
               child: widgets[index],
+              // widget.newIndex!=null?widgets[widget.newIndex!]:widgets[index]
             ),
           ],
         ),
       ),
     );
-  }
-
-  rebuild() {
-    setState(() {
-      selectedIndex = index;
-    });
-  }
-}
+  }}

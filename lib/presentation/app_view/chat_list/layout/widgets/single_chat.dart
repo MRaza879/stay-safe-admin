@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saty_safe_admin/presentation/app_view/home_screen/layout/body.dart';
 
 
 class SingleChat extends StatelessWidget {
@@ -9,7 +10,6 @@ class SingleChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){print('chat clicked');},
       child: Column(
         children: [
           ListTile(
@@ -27,6 +27,7 @@ class SingleChat extends StatelessWidget {
           )
         ],
       ),
+      onTap: (){HomeScreenBody(newIndex: 6,);},
     );
   }
 }

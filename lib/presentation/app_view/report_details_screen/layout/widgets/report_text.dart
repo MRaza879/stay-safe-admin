@@ -4,6 +4,7 @@ class ReportText extends StatelessWidget {
   double? width;
   double? padding;
   String? text;
+
   ReportText({
     super.key,
     this.height,
@@ -28,4 +29,3 @@ class ReportText extends StatelessWidget {
     );
   }
 }
-
